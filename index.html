@@ -5,8 +5,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script type="module" src="script.js"></script>
-   <title>Postman Clone</title>
+   <script src="script.js" type="module"></script>
+   <title>Document</title>
 </head>
 
 <body>
@@ -53,7 +53,8 @@
             </div>
          </div>
       </form>
-      <div class="mt-5" data-response-section>
+
+      <div class="mt-5 d-none" data-response-section>
          <h3>Response</h3>
          <div class="d-flex my-2">
             <div class="me-3">
@@ -67,13 +68,34 @@
             </div>
          </div>
 
+         <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+               <button class="nav-link active" id="body-tab" data-bs-toggle="tab" data-bs-target="#body" type="button"
+                  role="tab" aria-controls="body" aria-selected="true">Body</button>
+            </li>
+            <li class="nav-item" role="presentation">
+               <button class="nav-link" id="response-headers-tab" data-bs-toggle="tab"
+                  data-bs-target="#response-headers" type="button" role="tab" aria-controls="response-headers"
+                  aria-selected="false">Headers</button>
+            </li>
+         </ul>
+
+         <div class="tab-content p-3 border-top-0 border">
+            <div class="tab-pane fade show active" id="body" role="tabpanel" aria-labelledby="body-tab">
+               <div data-json-response-body class="overflow-auto" style="max-height: 200px;"></div>
+            </div>
+            <div class="tab-pane fade" id="response-headers" role="tabpanel" aria-labelledby="response-headers-tab">
+               <div style="display: grid; grid-template-columns: auto 1fr; gap: .5rem 2rem;" data-response-headers>
+               </div>
+            </div>
+         </div>
       </div>
    </div>
 
    <template data-key-value-template>
       <div class="input-group my-2" data-key-value-pair>
-         <input type="text" data-key class="form-control" placeholder="Key">
-         <input type="text" data-value class="form-control" placeholder="Value">
+         <input type="text" data-key class="form-control" placeholder="Key" />
+         <input type="text" data-value class="form-control" placeholder="Value" />
          <button type="button" data-remove-btn class="btn btn-outline-danger">Remove</button>
       </div>
    </template>

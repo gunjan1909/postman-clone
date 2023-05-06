@@ -5,3 +5,7 @@
 - axios
 - snowpack
 - bootstrap
+- codemirror packages
+- pretty bytes
+
+## Project deprecated

@@ -10,10 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.4.0",
-    "bootstrap": "^5.2.3"
+    "@codemirror/basic-setup": "^0.18.2",
+    "@codemirror/commands": "^0.18.2",
+    "@codemirror/lang-json": "^0.18.0",
+    "@codemirror/view": "^0.18.16",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.1",
+    "pretty-bytes": "^5.6.0"
   },
   "devDependencies": {
-    "snowpack": "^3.7.1"
+    "snowpack": "^3.5.6"
   }
 }
